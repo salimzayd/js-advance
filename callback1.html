@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+
+
+let stocks = {
+            fruits : ["strawberry","grapes","banana","apples"],
+            liquid: ["water","ice"],
+            holder : ["cone","cup","stick"],
+            toppings: ["chocolate","peanuts"]
+        };
+
+        let order = (fruit_name,call_production) =>{
+           
+            setTimeout(() =>{
+                console.log(`${stocks.fruits[fruit_name]} was selected`);
+
+                call_production()
+            },2000);
+
+        };
+
+
+        let production = () =>{
+
+            setTimeout(() =>{
+                console.log("production has started");
+
+                setTimeout(() => {
+                    console.log("the fruits were choked");
+
+
+                    setTimeout(() =>{
+                        console.log(` ${stocks.liquid[0]} and ${stocks.liquid[1]} was added`);
+
+                        setTimeout(() =>{
+                            console.log("the machine was started");
+
+                            setTimeout(() =>{
+                                console.log(`the ice cream was placed on ${stocks.holder[0]}`);
+
+                                setTimeout(() =>{
+                                    console.log(`${stocks.toppings[2]} was added as topping`);
+
+                                    setTimeout(()=>{
+                                        console.log("the ice cream was served");
+
+                                        setTimeout(() =>{
+                                            console.log("THANK YOU & VISIT AGAIN");
+                                        },2000);
+                                    },2000);
+                                },3000);
+                            },1000);
+                        },1000);
+                    },1000);
+                },2000);
+            },0000);
+        };
+
+
+        order(2,production);
+
+
+        // this is call back hell . patter of call back hell isn look like this..!!!!!!! 
+
+
+
+
+    </script>
+</body>
+</html>

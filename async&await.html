@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+let stocks = {
+            fruits : ["strawberry","grapes","banana","apples"],
+            liquid: ["water","ice"],
+            holder : ["cone","cup","stick"],
+            toppings: ["chocolate","peanuts"]
+        };
+
+        let is_shop_open = true;
+
+        let topping_choice = () =>{
+            return new Promise((resolve,reject) =>{
+                setTimeout(() =>{
+                    resolve(console.log("which topping do you prefer ?"));
+                },3000);
+            });
+        };
+
+
+        async function kitchen (){
+            console.log(" a ");
+            console.log(" b ");
+            console.log(" c ");
+            console.log(" d ");
+
+            await topping_choice();
+
+            console.log(" e ");
+            console.log(" f ");
+
+        }
+
+        kitchen();
+
+
+        console.log("doing the dishes");
+        console.log("cleaning the tables");
+        console.log(" taking others orders");
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
